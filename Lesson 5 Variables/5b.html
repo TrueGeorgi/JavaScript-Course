@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Variables</title>
+</head>
+<body>
+  <script>
+    let coffeePrice = 5;
+    let coffeeQuantity = 1;
+    let bagelsPrice = 3;
+    let begalsQuantity = 2;
+    let soupPrice = 9;
+    let soupQuantity = 1;
+
+    let cost = (coffeePrice * coffeeQuantity) + (bagelsPrice * begalsQuantity) + (soupPrice * soupQuantity);
+    let tax = cost * 0.1;
+    let totalCost = cost + tax;
+
+    console.log(`Cost of food: $${cost}`);
+    console.log(`Tax (10%): $${tax}`);
+    console.log(`Total cost: $${totalCost}`);
+  </script>
+</body>
+</html>

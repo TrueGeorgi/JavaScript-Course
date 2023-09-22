@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>6b</title>
+</head>
+<body>
+  
+  <script>
+    let age = Math.round(Math.random() * 100);
+    const isHoliday = age % 2 === 0 ? true : false;
+
+    console.log(age);
+    console.log(isHoliday)
+
+    if ((age <= 6 || age >= 65) && !isHoliday) {
+      console.log('Discount')
+    } else {
+      console.log('No discount')
+    }
+
+  </script>
+</body>
+</html>

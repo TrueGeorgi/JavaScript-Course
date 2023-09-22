@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>6a</title>
+</head>
+<body>
+  
+  <script>
+    let hour = Math.round(Math.random() * 100);
+    let name = 'Georgi';
+
+    while (hour > 24) {
+      hour -= 24;
+    }
+
+    console.log(hour);
+
+    if (hour >= 6 && hour <= 12) {
+      console.log(`Good morning, ${name}!`)
+    } else if (hour >= 13 && hour <= 17) {
+      console.log(`Good afternoon, ${name}!`)
+    } else {
+      console.log(`Good night, ${name}!`)
+    }
+
+  </script>
+</body>
+</html>

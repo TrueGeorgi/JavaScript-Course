@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+  <p>Rock Paper Scissors</p>
+  <button onclick="
+    player = 'Rock';
+    ranodomNumber = Math.random();
+
+    if (ranodomNumber >= 0 && ranodomNumber < 1 / 3) {
+      computer = 'Rock';
+    } else if (ranodomNumber >= 1/3 && ranodomNumber < 2 / 3) {
+      computer = 'Paper';
+    } else {
+      computer = 'Scissors';
+    }
+
+    console.log(computer);
+
+    if (computer === 'Rock') {
+      result = 'Tie';
+    } else if (computer === 'Paper') {
+      result = 'You lose';
+    } else if (computer === 'Scissors') {
+      result = 'You win';
+    }
+
+    alert(`You picked Rock. Computer picked ${computer}. ${result}`);
+  ">Rock</button>
+
+  <button onclick="
+    player = 'Paper';
+    ranodomNumber = Math.random();
+
+    if (ranodomNumber >= 0 && ranodomNumber < 1 / 3) {
+      computer = 'Rock';
+    } else if (ranodomNumber >= 1/3 && ranodomNumber < 2 / 3) {
+      computer = 'Paper';
+    } else {
+      computer = 'Scissors';
+    }
+
+    console.log(computer);
+
+    if (computer === 'Rock') {
+      result = 'You win';
+    } else if (computer === 'Paper') {
+      result = 'Tie';
+    } else if (computer === 'Scissors') {
+      result = 'You lose';
+    }
+
+    alert(`You picked Paper. Computer picked ${computer}. ${result}`);
+  ">Paper</button>
+
+  <button onclick="
+   player = 'Scissors';
+    ranodomNumber = Math.random();
+
+    if (ranodomNumber >= 0 && ranodomNumber < 1 / 3) {
+      computer = 'Rock';
+    } else if (ranodomNumber >= 1/3 && ranodomNumber < 2 / 3) {
+      computer = 'Paper';
+    } else {
+      computer = 'Scissors';
+    }
+
+    console.log(computer);
+
+    if (computer === 'Rock') {
+      result = 'You lose';
+    } else if (computer === 'Paper') {
+      result = 'You win';
+    } else if (computer === 'Scissors') {
+      result = 'Tie';
+    }
+
+    alert(`You picked Scissors. Computer picked ${computer}. ${result}`);
+  ">Scissors</button>
+
+  <script>
+    let player = '';
+    let computer = '';
+    let result = '';
+    let ranodomNumber = 0;
+  </script>
+</body>
+</html>
