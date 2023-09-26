@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>8e</title>
+</head>
+<body>
+  <script>
+    function isSameProduct(producit1, producit2) {
+      let string1 = JSON.stringify(producit1);
+      let string2 = JSON.stringify(producit2);
+
+      return string1 === string2 ? true : false;
+    }
+
+    const basketball = {
+        name: 'basketball',
+        price: 2095
+      };
+
+    const house = {
+      name: 'house',
+      price: 2095000
+    };
+
+    const car = {
+      name: 'house',
+      price: 2095000
+    };
+
+    console.log(isSameProduct(basketball, house));
+    console.log(isSameProduct(car, house));
+
+    let name = 'ERiK';
+    console.log(name.toLowerCase());
+    console.log(name.toLowerCase().repeat(4));
+  </script>
+</body>
+</html>

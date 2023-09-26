@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>7c</title>
+</head>
+<body>
+  
+  <script>
+    function convertTemperature(degrees, value) {
+      if (value.toLowerCase() === 'c') {
+        return (degrees * 9 / 5) + 32;
+      } else {
+        return (degrees - 32) * 5 / 9;
+      }
+    }
+
+    console.log(convertTemperature(24, 'c'));
+    console.log(convertTemperature(24, 'C'));
+    console.log(convertTemperature(30, 'c'));
+    console.log(convertTemperature(86, 'f'));
+  </script>
+</body>
+</html>

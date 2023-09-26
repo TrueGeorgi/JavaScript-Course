@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Rock Paper Scissors</title>
+  <title>Rock Paper Scissors - copy</title>
 </head>
 <body>
   <p>Rock Paper Scissors</p>
@@ -18,30 +18,7 @@
     playGame('Scissors');
   ">Scissors</button>
 
-  <button onclick="
-    score.wins = 0;
-    score.losses = 0;
-    score.ties = 0;
-    localStorage.removeItem('score');
-  ">Reset Score</button>
-
   <script>
-    let score = JSON.parse(localStorage.getItem('score')) || {
-        wins: 0,
-        losses: 0,
-        ties: 0
-      };
-
-      /*
-      if (!score) {
-        score = {
-          wins: 0,
-          losses: 0,
-          ties: 0
-        };
-      }
-      */
-
     function playGame(player) {
       const computer = pickComputerMove();
       let result = '';
@@ -74,18 +51,8 @@
         }
       }
 
-      if (result === 'You win') {
-        score.wins++;
-      } else if (result === 'You lose') {
-        score.losses++;
-      } else {
-        score.ties++;
-      }
-
-      localStorage.setItem('score', JSON.stringify(score));
-
-    alert(`You picked ${player}. Computer picked ${computer}. ${result} \nWins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`)
-    };
+    alert(`You picked ${player}. Computer picked ${computer}. ${result}`)
+    }
 
     function pickComputerMove () {
       let ranodomNumber = 0;
