@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>9h</title>
+</head>
+<body>
+  <input class="js-input-field" placeholder="Type something" onkeyup="
+  transmitInputText();
+    ">
+    <p class="js-copy-from-input"></p>
+
+  <script>
+    function transmitInputText() {
+      let inputElement = document.querySelector('.js-input-field');
+
+      let textInput = inputElement.value;
+
+      document.querySelector('.js-copy-from-input').innerHTML = textInput;
+    }
+  </script>
+</body>
+</html>

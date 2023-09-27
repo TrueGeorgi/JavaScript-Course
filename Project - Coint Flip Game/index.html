@@ -4,17 +4,49 @@
   <title>Coin Flip Game</title>
 </head>
 <body>
+
+  <button onclick="
+    playgame('Heads');
+  ">heads</button>
+  <button onclick="
+    playgame('Tails');
+  ">tails</button>
+  <button onclick="
+   localStorage.removeItem('jsonString');
+   console.log(`The score was reset!`);
+  ">reset</button>
   
   <script>
-    let randomNumber = Math.random();
-    let result = '';
-    let guess = 'Tails';
 
-    console.log(randomNumber);
+    function playgame(guess) {
 
-    randomNumber < 0.5 ? result = 'Heads' : result = 'Tails';
+      let score = JSON.parse(localStorage.getItem('jsonString')) || {
+        wins: 0,
+        losses: 0
+      };
 
-    guess === result ? console.log('You win!') : console.log('You lose!')
+      let randomNumber = Math.random();
+      let result = '';
+
+      
+
+      if(randomNumber < 0.5) {
+        result = 'Heads';
+        score.wins++;
+      } else {
+        result = 'Tails';
+        score.losses++;
+      }
+
+      console.log(result);
+      guess === result ? console.log('You win!') : console.log('You lose!');
+      console.log(score);
+
+      let jsonString = JSON.stringify(score);
+      localStorage.setItem('jsonString', jsonString);
+    }
+
+
   </script>
 </body>
 </html>

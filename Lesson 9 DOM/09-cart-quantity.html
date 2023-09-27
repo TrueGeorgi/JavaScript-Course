@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cart Quantity</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <p>Cart Quantity</p>
+
+    <button onclick="
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">Show Quantity</button>
+
+    <button onclick="
+      updateCart(1);
+    ">Add to Cart</button>
+
+    <button onclick="
+      updateCart(2);
+    ">+2</button>
+
+    <button onclick="
+     updateCart(3)
+    ">+3</button>
+
+    <button onclick="
+      updateCart(4)
+    ">+4</button>
+
+    <button onclick="
+      updateCart(5)
+    ">+5</button>
+
+    <button onclick="
+      updateCart(-1);
+    ">Remove from Cart</button>
+
+    <button onclick="
+      updateCart(-2);
+    ">-2</button>
+
+    <button onclick="
+    updateCart(-3);
+    ">-3</button>
+
+    <button onclick="
+    cartQuantity = 0;
+    console.log('Cart was reset');
+    console.log(`Cart quantity: ${cartQuantity}`);
+    displayCartQuantity();
+    ">Reset Cart</button>
+
+    <p class="js-cart-quantity-display"></p>
+
+    <script>
+      let cartQuantity = 0;
+
+     displayCartQuantity();
+
+      function updateCart(amount) {
+        if (amount < 0) {
+          console.log(cartQuantity + amount < 0 ? 'The cart is empty' : `Cart quantity: ${cartQuantity += amount}`);
+        } else {
+          console.log(cartQuantity + amount > 10 ? 'The cart is full' : `Cart quantity: ${cartQuantity += amount}`);
+      }
+
+      displayCartQuantity();
+    }
+
+    function displayCartQuantity() {
+        document.querySelector('.js-cart-quantity-display').innerHTML = `Cart quantity: ${cartQuantity}`;
+      }
+    </script>
+  </body>
+</html>

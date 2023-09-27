@@ -4,6 +4,7 @@
   <title>Calculator-copy2</title>
 </head>
 <body>
+  <p class="js-calculation-field"></p>
   <p>
     <button onclick="
       updateCalculator('1');
@@ -71,6 +72,7 @@
       calculation = eval(calculation);
       console.log(calculation);
       localStorage.setItem('calculation', calculation.toString());
+      displayCalculation();
     ">=</button>
 
     <button onclick="
@@ -82,6 +84,7 @@
     <button onclick="
       calculation = '';
       console.log('Cleared.');
+      displayCalculation();
       localStorage.removeItem('calculation');
     ">Clear</button>
   </p>
@@ -90,11 +93,17 @@
     let calculation = localStorage.getItem('calculation') || '';
 
     console.log(calculation);
+    displayCalculation();
 
     function updateCalculator(value) {
       calculation += value;
-      console.log(calculation);
+      // console.log(calculation);
+      displayCalculation();
       localStorage.setItem('calculation', calculation);
+    }
+
+    function displayCalculation() {
+      document.querySelector('.js-calculation-field').innerHTML = calculation;
     }
   </script>
 </body>

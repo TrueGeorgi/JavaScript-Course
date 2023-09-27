@@ -1,0 +1,16 @@
+.gaming,
+.music,
+.tech {
+  background-color: rgb(25, 25, 25);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-family: Arial;
+  cursor: pointer;
+}
+
+.isToggled {
+  background-color: lightgray;
+  color: black;
+}
