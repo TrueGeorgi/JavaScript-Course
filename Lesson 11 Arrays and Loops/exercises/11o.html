@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>11o</title>
+</head>
+<body>
+  
+  <script>
+    let stringsArray = ['hello', 'world', 'search', 'slept', 'good'];
+
+    arrayContainsWord(stringsArray, 'search')
+
+    let stringsArray2 = ['hello', 'world', 'nope', 'slept', 'good'];
+
+    arrayContainsWord(stringsArray2, 'search')
+
+    let stringsArray3 = ['hello', 'search', 'search', 'slept', 'search'];
+
+    arrayContainsWord(stringsArray3, 'search')
+
+    function arrayContainsWord (array, word) {
+      const searchedWord = word;
+      let wordFound = false;
+
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === searchedWord) {
+          wordFound = true;
+          console.log(i);
+          break;
+        }
+      }
+
+      if(!wordFound) {
+        console.log(-1);
+      }
+    }
+  </script>
+</body>
+</html>

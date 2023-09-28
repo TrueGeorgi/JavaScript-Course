@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function addNum (array, num) {
+      const arrayToReturn = [];
+
+      for (let i = 0; i < array.length; i++) {
+        const newNumber = array[i] + num;
+        arrayToReturn.push(newNumber);
+      }
+
+      return arrayToReturn;
+    }
+
+    console.log(addNum([3, 5, 7, 10], 10));
+  </script>
+</body>
+</html>
