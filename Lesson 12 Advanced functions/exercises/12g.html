@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>12e</title>
+</head>
+<body>
+  <button onclick="
+    newMessages(++messages);
+  ">Add</button>
+  <button onclick="
+  if (messages === 0) {
+    document.title = `App`;
+  } else {
+    newMessages(--messages);
+  }
+  ">Remove</button>
+
+  <script>
+    let messages = 2;
+    function newMessages(messages) {
+      document.title = `(${messages}) New messages`;
+    };
+  </script>
+</body>
+</html>

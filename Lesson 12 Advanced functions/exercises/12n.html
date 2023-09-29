@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>12n</title>
+</head>
+<body>
+  <script>
+    const foods = ['egg', 'apple', 'egg','egg','egg', 'kiwi'];
+
+    function removeEgg(array) {
+      let eggsRemoved = 0;
+      let finalArray = array.filter((value) => {
+        if ((value === 'egg') && (eggsRemoved < 2)) {
+          eggsRemoved++;
+          return false;
+        } else {
+          return true;
+        }
+      });
+
+      return finalArray;
+    };
+
+    console.log(removeEgg(foods));
+  </script>
+</body>
+</html>

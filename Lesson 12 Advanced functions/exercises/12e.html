@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>12e</title>
+</head>
+<body>
+  <button onclick="
+    clearTimeout(timeoutID);
+
+    document.querySelector('.added')
+      .innerHTML = 'Added'
+
+    timeoutID = setTimeout(() => {
+      document.querySelector('.added')
+      .innerHTML = ''
+    }, 2000);
+  ">Add to cart</button>
+  <p class="added"></p>
+
+  <script>
+    let timeoutID;
+  </script>
+</body>
+</html>

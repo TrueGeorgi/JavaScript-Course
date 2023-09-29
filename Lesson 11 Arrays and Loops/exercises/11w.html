@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>11w</title>
+</head>
+<body>
+  
+  <script>
+    function findIndex(array, word) {
+      let found = false;
+
+      for(let i = 0; i < array.length; i++) {
+        const arrayWord = array[i];
+        if (arrayWord === word) {
+          return i;
+        }
+      }
+
+      return -1;
+    }
+
+    function unique (array) {
+      const arrayToReturn = [];
+
+      for (let i = 0; i < array.length; i++) {
+        const currentWord = array[i];
+
+        let exists = findIndex(arrayToReturn, currentWord);
+
+        if (exists === -1) {
+          arrayToReturn.push(currentWord);
+        }
+      }
+
+      return arrayToReturn;
+    }
+
+
+    const array1 = ['apple', 'orange', 'apple', 'orange', 'kiwi', 'bananna', 'watermelon'];
+
+    console.log(findIndex(array1, 'orange'));
+    console.log(findIndex(array1, 'watermelon'));
+    console.log(findIndex(array1, 'melon'));
+    console.log(unique(array1));
+  </script>
+</body>
+</html>

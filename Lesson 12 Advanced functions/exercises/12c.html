@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>12c</title>
+</head>
+<body>
+  <button class="start-button js-start-button">
+    Start
+  </button>
+  <script>
+    document.querySelector('.js-start-button').addEventListener('click', () => {
+      document.querySelector('.start-button').innerHTML = 'Loading...!';
+      setTimeout(() => {
+        document.querySelector('.start-button').innerHTML = 'Finished!';
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
